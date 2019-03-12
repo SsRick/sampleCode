@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t, n, i;
+    int arr[1000000];
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        for(i = 0; i < n ; i++)
+        {
+            cin>>arr[i];
+        }
+        
+        for(i = 0; i < n ; i++)
+        {
+            if (i == n-1)
+            {
+                cout<<-1<<" ";
+                break;
+            }
+            if(arr[i+1]<arr[i])
+            cout<<arr[i+1]<<" ";
+            else
+            cout<<-1<<" ";
+        }
+        printf("\n");
+    }
+	return 0;
+}
